@@ -9,6 +9,10 @@ The following commands are available on this docker image. You can generate bash
 
 EOL
 
+sed -i 's/localhost/$SCHEMA_REGISTRY/g' /usr/bin/kafka-avro-console-producer
+sed -i 's/8081/$SCHEMA_REGISTRY_PORT/g' /usr/bin/kafka-avro-console-producer
+sed -i 's/localhost/$SCHEMA_REGISTRY/g' /usr/bin/kafka-avro-console-consumer
+sed -i 's/8081/$SCHEMA_REGISTRY_PORT/g' /usr/bin/kafka-avro-console-consumer
 
 
 if [ "$1" = "alias" ]; then
