@@ -13,9 +13,8 @@ MAINTAINER contact@confluent.io
 WORKDIR /usr/bin
 
 ADD confluent-tools.sh /usr/bin/confluent-tools
-ADD dosettings.sh /usr/bin/dosettings.sh
+#ADD dosettings.sh /usr/bin/dosettings.sh
 
-RUN chmod +x /usr/bin/dosettings.sh
+#RUN chmod +x /usr/bin/dosettings.sh
 
-ENTRYPOINT ["/usr/bin/dosettings.sh"]
-CMD ["confluent-tools"]
+ENTRYPOINT ["confluent-tools"]
